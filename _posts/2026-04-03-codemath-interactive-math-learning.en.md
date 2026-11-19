@@ -11,8 +11,6 @@ permalink: /blog/en/codemath-interactive-math-learning
 
 ![CodeMath Homepage](/images/codemath-home.png)
 
-# CodeMath: An Interactive Math Learning Platform 🧮
-
 I'm excited to introduce my latest open-source project — **CodeMath**, an interactive math learning platform built with modern web technologies.
 
 ## The Inspiration

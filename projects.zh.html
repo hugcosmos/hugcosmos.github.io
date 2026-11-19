@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicky 的项目</title>
+    <title>开源项目 — Nicky（hugcosmos）</title>
+    <meta name="description" content="七个开源项目与两个课程实践：交互式数学、配音练习、多角色有声书、播客生成、电影推荐与本地优先小工具。">
+    <link rel="canonical" href="https://hugcosmos.github.io/projects.zh.html">
+    <link rel="alternate" hreflang="zh" href="https://hugcosmos.github.io/projects.zh.html">
+    <link rel="alternate" hreflang="en" href="https://hugcosmos.github.io/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nicky — AI Product Engineer">
+    <meta property="og:title" content="开源项目 — Nicky（hugcosmos）">
+    <meta property="og:description" content="七个开源项目与两个课程实践：交互式数学、配音练习、多角色有声书、播客生成、电影推荐与本地优先小工具。">
+    <meta property="og:url" content="https://hugcosmos.github.io/projects.zh.html">
+    <meta property="og:image" content="https://hugcosmos.github.io/images/project-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicky","alternateName":["Nicky Liu","hugcosmos"],"jobTitle":"AI Product Engineer","url":"https://hugcosmos.github.io/","email":"mailto:hugcosmos@gmail.com","sameAs":["https://github.com/hugcosmos"],"knowsAbout":["LLM application engineering","AI agents","ASR and TTS pipelines","React","TypeScript","Python"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Nicky — AI Product Engineer","url":"https://hugcosmos.github.io/"}</script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -32,131 +45,148 @@
     <main class="container">
         <section class="projects-section">
             <div class="about-text">
-                <h2>最新项目</h2>
-                <p>我投入了大量时间在 Study Buddy 项目上，特别是涉及 Python 的项目。</p>
+                <h2>开源项目</h2>
+                
+                <p>七个开源仓库加两个课程实践，按“能否立刻体验、工程完整度、问题难度”排序，每一项都给出可打开的链接。</p>
             </div>    
                         <!-- Project cards will go here -->
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/codemath-home.png" alt="CodeMath">
+                        <img src="images/codemath-home.png" alt="CodeMath — interactive computer-science math platform" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>CodeMath</h3>
-                        <p>受《程序员的数学》启发的交互式数学学习平台。通过丰富的动画、3D 效果和动手交互演示，探索计算机科学数学。</p>
+                        <p>交互式计算机数学学习平台：九章内容全部做成可动手的演示——进制转换、逻辑门实验台、真值表生成器、归纳法多米诺、汉诺塔、分形与停机问题模拟器。</p>
+                        <p class="project-meta">React 19 · TypeScript · Three.js · GSAP · KaTeX · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://codemath.pages.dev/" class="project-link" target="_blank"><i class="fas fa-globe"></i> 在线演示</a>
+                            <a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://codemath.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> 在线演示</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/sceneline-home.png" alt="SceneLine">
+                        <img src="images/sceneline-home.png" alt="SceneLine — AI dubbing practice platform" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>SceneLine</h3>
-                        <p>AI驱动的配音练习平台，支持实时ASR、40+种TTS声音和多角色对话训练。非常适合语言学习者和配音演员。</p>
+                        <p>面向语言学习者的 AI 配音练习平台：FunASR 常驻进程实现实时语音识别，40+ Edge TTS 音色按性别与地区筛选，支持多角色分角色评分，并提供带数据持久化的 Docker 部署。</p>
+                        <p class="project-meta">Node 20 · Python · FunASR · Edge TTS · Docker · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/audiobook-dark.png" alt="Scripts to Audiobook">
+                        <img src="images/audiobook-dark.png" alt="Scripts to Audiobook — multi-voice synthesis" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Scripts to Audiobook</h3>
-                        <p>将脚本转换为多声部有声书，支持多种TTS提供商。可配置声音、章节和音频格式。</p>
+                        <p>把格式化脚本转成多角色有声书：接入 Edge、ElevenLabs、讯飞、百度四家 TTS，内置加权音色匹配引擎与 61 音色目录，支持专辑化管理，输出合并 MP3 与 SRT 字幕。</p>
+                        <p class="project-meta">FastAPI · React · SQLite · 4 TTS providers</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/podcast-studio.png" alt="Podcast Studio">
+                        <img src="images/podcast-studio.png" alt="Podcast Studio — news-grounded podcast generator" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Podcast Studio</h3>
-                        <p>AI驱动的播客节目生成器。将任何话题转化为多发言人、新闻驱动的播客节目，拥有自然对话和逼真的声音。无需API密钥即可进行语音合成。</p>
+                        <p>输入话题即可成片：用 Perplexity sonar-pro 检索新闻并生成多轮对话脚本，逐段匹配 Edge TTS 音色，再用 ffmpeg 合并成单条 MP3，两分钟左右产出一期节目。</p>
+                        <p class="project-meta">Python · FastAPI · Perplexity · Edge TTS · ffmpeg · Docker</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project1.png" alt="Project 2">
+                        <img src="images/project-preview.png" alt="Book to Audiobook — ebook to chapter-marked audio" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <h3>使用 Gradio 构建生成式 AI 应用</h3>
-                        <p>「使用 Gradio 构建生成式 AI 应用」课程的学习伙伴</p>
+                        <h3>Book to Audiobook</h3>
+                        <p>把 EPUB、MOBI、AZW3、PDF、TXT 转成带章节标记的 M4B / MP3 有声书，可选 TTS 供应商，支持 pip 直接安装的命令行用法。</p>
+                        <p class="project-meta">Python 3.11+ · ffmpeg · Calibre · PyPI</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank"><i class="fas fa-link"></i> 清言智能体</a>
-                            <a href="https://github.com/hugcosmos/Notebooks-Building-Generative-AI-Applications-with-Gradio" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project2.png" alt="Project 1">
+                        <img src="images/moviefairy-icon.png" alt="MovieFairy — mood-based movie recommender" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <h3>AI Python 入门（配合 GLM-4）</h3>
-                        <p>吴恩达 AI Python 课程的学习伙伴</p>
+                        <h3>MovieFairy</h3>
+                        <p>温柔的电影推荐工具：三个问题把心情映射到九种基于情绪调节理论的推荐策略，再从候选里加权采样。纯静态、可离线，无后端与 API 调用。</p>
+                        <p class="project-meta">Vanilla JS · Cloudflare Pages · PWA</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank"><i class="fas fa-link"></i> 清言智能体</a>
-                            <a href="https://github.com/hugcosmos/AI-Python-For-Beginners-with-GLM4" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://moviefairy.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> 在线体验</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://cdn.jsdelivr.net/gh/hugcosmos/book-to-audiobook@main/screenshot.png" alt="Book to Audiobook" onerror="this.src='images/project-preview.png'">
+                        <img src="images/readaloud-icon.png" alt="ReadAloud — Edge TTS Chrome extension" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <h3>书籍转有声书 📚</h3>
-                        <p>将电子书转换为有声书，支持多种TTS选项。支持各种格式和自定义语音设置，打造个性化收听体验。</p>
+                        <h3>Edge Read Chrome (ReadAloud)</h3>
+                        <p>Chrome 朗读扩展：使用 Edge 神经网络音色逐词高亮朗读，通过 native messaging 而非 Web Speech API，内置微信读书、书香中国、QQ 阅读、豆瓣等站点的正文提取。</p>
+                        <p class="project-meta">Chrome MV3 · Native messaging · edge-tts</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.jsdelivr.net/gh/hugcosmos/MovieFairy@main/screenshot.png" alt="MovieFairy" onerror="this.src='images/project-preview.png'">
-                    </div>
-                    <div class="project-info">
-                        <h3>MovieFairy 🎬</h3>
-                        <p>一个温柔的电影推荐工具。回答3个简单问题，它就会为你挑选一部精彩的电影。</p>
-                        <div class="project-links">
-                            <a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.jsdelivr.net/gh/hugcosmos/edge-read-chrome@main/assets/icon.png" alt="Edge Read Chrome" onerror="this.src='images/project-preview.png'">
-                    </div>
-                    <div class="project-info">
-                        <h3>Edge Read Chrome ⚡</h3>
-                        <p>一款 Chrome 扩展，使用 Edge TTS 语音朗读网页内容。浏览网页的同时，可以听文章、论文等内容。</p>
-                        <div class="project-links">
-                            <a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+            <div class="about-text">
+                <h3>课程实践</h3>
+                <p>下面两个是课程期间的整理成果，没有公开仓库，保留在此是为了说明学习路径。</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.png" alt="Build generative AI apps with Gradio — course notebooks" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Building Generative AI Applications with Gradio</h3>
+                        <p>课程 Notebook 与配套智能体：跟着课程用 Gradio 构建并部署生成式 AI 应用；课程仓库目前未公开，智能体可在线体验。</p>
+                        <p class="project-meta">Jupyter · Gradio · Qingyan agent</p>
+                        <div class="project-links">
+                            <a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> 清言智能体</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.png" alt="AI Python for Beginners with GLM-4 — course notebooks" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Python for Beginners with GLM-4</h3>
+                        <p>吴恩达 AI Python 入门课程的学习伙伴，配合基于 GLM-4 的智能体边学边问；课程仓库目前未公开，智能体可在线体验。</p>
+                        <p class="project-meta">Jupyter · GLM-4 · Qingyan agent</p>
+                        <div class="project-links">
+                            <a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> 清言智能体</a>
+                        </div>
+                    </div>
+                </div>
+                        </div>
 
             <div class="about-text">
                 <h3>相关智能体</h3>

@@ -11,8 +11,6 @@ permalink: /blog/zh/introducing-podcast-studio
 
 ![Podcast Studio](/images/podcast-studio-screenshot.png)
 
-# Podcast Studio：AI驱动的播客生成工具 🎙️
-
 很高兴宣布 **Podcast Studio** — 一个 AI 驱动的工具，可以将任何话题转化为引人入胜的多说话人播客节目。
 
 ## 它能做什么

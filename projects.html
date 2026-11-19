@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicky's Projects</title>
+    <title>Open Source Projects — Nicky (hugcosmos)</title>
+    <meta name="description" content="Seven open-source projects plus two coursework builds: interactive math, dubbing practice, multi-voice audiobooks, podcasts, movie recommendations and local-first tools.">
+    <link rel="canonical" href="https://hugcosmos.github.io/projects.html">
+    <link rel="alternate" hreflang="en" href="https://hugcosmos.github.io/projects.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://hugcosmos.github.io/projects.zh.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nicky — AI Product Engineer">
+    <meta property="og:title" content="Open Source Projects — Nicky (hugcosmos)">
+    <meta property="og:description" content="Seven open-source projects plus two coursework builds: interactive math, dubbing practice, multi-voice audiobooks, podcasts, movie recommendations and local-first tools.">
+    <meta property="og:url" content="https://hugcosmos.github.io/projects.html">
+    <meta property="og:image" content="https://hugcosmos.github.io/images/project-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicky","alternateName":["Nicky Liu","hugcosmos"],"jobTitle":"AI Product Engineer","url":"https://hugcosmos.github.io/","email":"mailto:hugcosmos@gmail.com","sameAs":["https://github.com/hugcosmos"],"knowsAbout":["LLM application engineering","AI agents","ASR and TTS pipelines","React","TypeScript","Python"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Nicky — AI Product Engineer","url":"https://hugcosmos.github.io/"}</script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -32,131 +45,148 @@
     <main class="container">
         <section class="projects-section">
             <div class="about-text">
-                <h2>My Latest Projects</h2>
-                <p>I've been investing a significant amount of time in Study Buddy projects, particularly those involving Python.</p>
+                <h2>Open Source Projects</h2>
+                
+                <p>Seven open-source repositories plus two coursework projects, ordered by what you can try right now, engineering completeness and problem difficulty. Every entry links to something you can open.</p>
             </div>    
                         <!-- Project cards will go here -->
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/codemath-home.png" alt="CodeMath">
+                        <img src="images/codemath-home.png" alt="CodeMath — interactive computer-science math platform" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>CodeMath</h3>
-                        <p>An interactive math learning platform inspired by "Mathematics for Programmers". Explore computer science mathematics through rich animations, 3D effects, and hands-on interactive demonstrations.</p>
+                        <p>An interactive platform for computer-science mathematics: nine chapters rebuilt as hands-on demos — base converter, logic-gate playground, truth-table generator, induction dominos, Tower of Hanoi, fractals and a halting-problem simulator.</p>
+                        <p class="project-meta">React 19 · TypeScript · Three.js · GSAP · KaTeX · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://codemath.pages.dev/" class="project-link" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                            <a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://codemath.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/sceneline-home.png" alt="SceneLine">
+                        <img src="images/sceneline-home.png" alt="SceneLine — AI dubbing practice platform" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>SceneLine</h3>
-                        <p>AI-powered dubbing practice platform with real-time ASR, 40+ TTS voices, and multi-character dialogue training. Perfect for language learners & voice actors.</p>
+                        <p>An AI dubbing practice platform for language learners: real-time ASR with a resident FunASR process, 40+ Edge TTS voices filtered by gender and locale, multi-character scenes with per-role scoring, and Docker deployment with data persistence.</p>
+                        <p class="project-meta">Node 20 · Python · FunASR · Edge TTS · Docker · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/audiobook-dark.png" alt="Scripts to Audiobook">
+                        <img src="images/audiobook-dark.png" alt="Scripts to Audiobook — multi-voice synthesis" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Scripts to Audiobook</h3>
-                        <p>Convert scripts into multi-voice audiobooks with multiple TTS providers. Supports configurable voices, chapters, and audio formats.</p>
+                        <p>Turn formatted scripts into multi-voice audiobooks across four TTS providers (Edge, ElevenLabs, iFlytek, Baidu), with a weighted voice-matching engine, a 61-voice catalog, album-based library management, and merged MP3 + SRT output.</p>
+                        <p class="project-meta">FastAPI · React · SQLite · 4 TTS providers</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/podcast-studio.png" alt="Podcast Studio">
+                        <img src="images/podcast-studio.png" alt="Podcast Studio — news-grounded podcast generator" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Podcast Studio</h3>
-                        <p>AI-powered podcast episode generator. Turn any topic into a multi-speaker, news-grounded episode with natural conversations and lifelike voices. No API keys needed for speech synthesis.</p>
+                        <p>Topic in, episode out: news search and a multi-turn script via Perplexity sonar-pro, distinct Edge TTS voices per turn, merged into one MP3 with ffmpeg — a finished episode in about two minutes.</p>
+                        <p class="project-meta">Python · FastAPI · Perplexity · Edge TTS · ffmpeg · Docker</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project1.png" alt="Project 2">
+                        <img src="images/project-preview.png" alt="Book to Audiobook — ebook to chapter-marked audio" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Book to Audiobook</h3>
+                        <p>Convert EPUB, MOBI, AZW3, PDF and TXT into chapter-marked M4B or MP3 audiobooks, with selectable TTS providers and a pip-installable command line.</p>
+                        <p class="project-meta">Python 3.11+ · ffmpeg · Calibre · PyPI</p>
+                        <div class="project-links">
+                            <a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/moviefairy-icon.png" alt="MovieFairy — mood-based movie recommender" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>MovieFairy</h3>
+                        <p>A gentle movie recommender: three questions map your mood onto nine strategies drawn from mood-management theory, then sample from the top candidates. Pure static, PWA, no backend or API calls.</p>
+                        <p class="project-meta">Vanilla JS · Cloudflare Pages · PWA</p>
+                        <div class="project-links">
+                            <a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://moviefairy.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/readaloud-icon.png" alt="ReadAloud — Edge TTS Chrome extension" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Edge Read Chrome (ReadAloud)</h3>
+                        <p>A Chrome extension that reads pages aloud with Edge neural voices and word-by-word highlighting, using native messaging instead of the Web Speech API, plus site-specific extraction for WeRead, ChineseAll, QQ Reading and Douban.</p>
+                        <p class="project-meta">Chrome MV3 · Native messaging · edge-tts</p>
+                        <div class="project-links">
+                            <a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-text">
+                <h3>Coursework</h3>
+                <p>Two course projects kept for context. Their repositories are not publicly available, so only the companion agents are linked.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.png" alt="Build generative AI apps with Gradio — course notebooks" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Building Generative AI Applications with Gradio</h3>
-                        <p>Your Study Buddy for the course of Building Generative AI Applications with Gradio</p>
+                        <p>Course notebooks plus a companion agent for building and deploying generative AI apps with Gradio. The course repository is not publicly available; the companion agent is.</p>
+                        <p class="project-meta">Jupyter · Gradio · Qingyan agent</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank"><i class="fas fa-link"></i>Qingyan Agent</a>
-                            <a href="https://github.com/hugcosmos/Notebooks-Building-Generative-AI-Applications-with-Gradio" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> Qingyan Agent</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project2.png" alt="Project 1">
+                        <img src="images/project2.png" alt="AI Python for Beginners with GLM-4 — course notebooks" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>AI Python for Beginners with GLM-4</h3>
-                        <p>Your Study Buddy for the course of AI Python by Andrew Ng</p>
+                        <p>Study companion for Andrew Ng's AI Python for Beginners, with a GLM-4 based agent answering along the course. The course repository is not publicly available; the agent is.</p>
+                        <p class="project-meta">Jupyter · GLM-4 · Qingyan agent</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank"><i class="fas fa-link"></i> Qingyan Agent</a>
-                            <a href="https://github.com/hugcosmos/AI-Python-For-Beginners-with-GLM4" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> Qingyan Agent</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.jsdelivr.net/gh/hugcosmos/book-to-audiobook@main/screenshot.png" alt="Book to Audiobook" onerror="this.src='images/project-preview.png'">
-                    </div>
-                    <div class="project-info">
-                        <h3>Book to Audiobook 📚</h3>
-                        <p>Convert ebooks to audiobooks with multiple TTS options. Supports various formats and customizable voice settings for a personalized listening experience.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.jsdelivr.net/gh/hugcosmos/MovieFairy@main/screenshot.png" alt="MovieFairy" onerror="this.src='images/project-preview.png'">
-                    </div>
-                    <div class="project-info">
-                        <h3>MovieFairy 🎬</h3>
-                        <p>A kind and gentle movie recommendation tool. Answer 3 simple questions, and it will pick a wonderful movie just for you.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.jsdelivr.net/gh/hugcosmos/edge-read-chrome@main/assets/icon.png" alt="Edge Read Chrome" onerror="this.src='images/project-preview.png'">
-                    </div>
-                    <div class="project-info">
-                        <h3>Edge Read Chrome ⚡</h3>
-                        <p>A Chrome extension that uses Edge TTS voices to read web pages aloud. Browse the web and listen to articles, papers, and more.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="about-text">
                 <h3>Related Agents</h3>

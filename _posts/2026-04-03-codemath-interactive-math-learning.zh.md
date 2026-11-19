@@ -11,8 +11,6 @@ permalink: /blog/zh/codemath-interactive-math-learning
 
 ![CodeMath 首页](/images/codemath-home.png)
 
-# CodeMath：交互式数学学习平台 🧮
-
 我很高兴介绍我的最新开源项目 — **CodeMath**，一个用现代 web 技术构建的交互式数学学习平台。
 
 ## 灵感来源
