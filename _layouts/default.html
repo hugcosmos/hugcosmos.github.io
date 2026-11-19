@@ -223,5 +223,26 @@
             </div>
         </div>
     </footer>
+<script>
+(function () {
+  try {
+    var KEY = 'lang-pref';
+    // 用户手动切换过语言，就永远尊重这个选择
+    var pref = localStorage.getItem(KEY);
+    document.querySelectorAll('.lang-switch-nav a').forEach(function (a) {
+      a.addEventListener('click', function () { localStorage.setItem(KEY, '1'); });
+    });
+    if (pref) return;
+    var path = location.pathname;
+    var isHome = path === '/' || /\/index(\.zh)?\.html$/.test(path);
+    if (!isHome) return; // 只在首页自动判断，深链接不打扰
+    var lang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    var wantsZh = String(lang).toLowerCase().indexOf('zh') === 0;
+    var onZhPage = document.documentElement.lang.indexOf('zh') === 0;
+    if (wantsZh && !onZhPage) location.replace('/index.zh.html');
+    else if (!wantsZh && onZhPage) location.replace('/');
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
