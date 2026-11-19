@@ -3,7 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    {%- assign _desc = page.description | default: site.description -%}
+{%- assign _canonical = site.url | append: page.url -%}
+{%- assign _title = page.title | default: site.title -%}
+<title>{{ _title }}</title>
+    <meta name="description" content="{{ _desc }}">
+    <link rel="canonical" href="{{ _canonical }}">
+    <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ _canonical }}">
+{%- if page.collection == 'posts' -%}
+    {%- if page.lang == 'zh' -%}
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/blog/{{ page.slug }}">
+    {%- else -%}
+    <link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/blog/zh/{{ page.slug }}">
+    {%- endif -%}
+{%- elsif page.alt_url -%}
+    <link rel="alternate" hreflang="{% if page.lang == 'zh' %}en{% else %}zh-CN{% endif %}" href="{{ site.url }}{{ page.alt_url }}">
+{%- endif %}
+    <meta property="og:type" content="{% if page.collection == 'posts' %}article{% else %}website{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ _title }}">
+    <meta property="og:description" content="{{ _desc }}">
+    <meta property="og:url" content="{{ _canonical }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.image | default: site.og_image }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Nicky","alternateName":["Nicky Liu","hugcosmos"],"jobTitle":"AI Product Engineer","url":"{{ site.url }}/","email":"mailto:hugcosmos@gmail.com","sameAs":["https://github.com/hugcosmos"],"knowsAbout":["LLM application engineering","AI agents","ASR and TTS pipelines","React","TypeScript","Python"]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"{{ site.title }}","url":"{{ site.url }}/"}
+    </script>
+{%- if page.collection == 'posts' %}
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","author":{"@type":"Person","name":"Nicky","url":"{{ site.url }}/"},"mainEntityOfPage":"{{ _canonical }}","inLanguage":"{{ page.lang | default: 'en' }}","description":{{ _desc | jsonify }}}
+    </script>
+{%- endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     {% if page.name == "blog.zh.html" %}
@@ -150,7 +183,7 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>好奇心空间</h1>
+            <div class="site-title">好奇心空间</div>
             <p>探索我的项目、兴趣和 AI 智能体收藏</p>
         </div>
     </header>
@@ -186,5 +219,26 @@
             </div>
         </div>
     </footer>
+<script>
+(function () {
+  try {
+    var KEY = 'lang-pref';
+    // 用户手动切换过语言，就永远尊重这个选择
+    var pref = localStorage.getItem(KEY);
+    document.querySelectorAll('.lang-switch-nav a').forEach(function (a) {
+      a.addEventListener('click', function () { localStorage.setItem(KEY, '1'); });
+    });
+    if (pref) return;
+    var path = location.pathname;
+    var isHome = path === '/' || /\/index(\.zh)?\.html$/.test(path);
+    if (!isHome) return; // 只在首页自动判断，深链接不打扰
+    var lang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    var wantsZh = String(lang).toLowerCase().indexOf('zh') === 0;
+    var onZhPage = document.documentElement.lang.indexOf('zh') === 0;
+    if (wantsZh && !onZhPage) location.replace('/index.zh.html');
+    else if (!wantsZh && onZhPage) location.replace('/');
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

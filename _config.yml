@@ -1,7 +1,9 @@
-title: Nicky's personal blog
-description: Bookmark this to keep an eye on my project updates!
+title: Nicky — AI Product Engineer
+description: AI product engineer, independent. Open-source work on speech pipelines, agents and interactive teaching, with the trade-offs written down.
 baseurl: ""
 url: "https://hugcosmos.github.io"
+og_image: /images/project-preview.png
+lang: en
 
 markdown: kramdown
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hugcosmos.github.io/sitemap.xml
