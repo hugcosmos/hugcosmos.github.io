@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {%- assign _desc = page.description | default: site.description -%}
+    {%- assign _raw_desc = page.description | default: page.excerpt | default: site.description -%}
+{%- assign _desc = _raw_desc | strip_html | normalize_whitespace | escape | truncate: 160 -%}
 {%- assign _canonical = site.url | append: page.url -%}
 {%- assign _title = page.title | default: site.title -%}
 <title>{{ _title }}</title>
