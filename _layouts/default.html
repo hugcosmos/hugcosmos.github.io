@@ -197,11 +197,10 @@
                 <li><a href="{{ site.baseurl }}/ai-agents.html" {% if page.name == 'ai-agents.html' %}class="active"{% endif %}>AI Agents</a></li>
                 <li><a href="{{ site.baseurl }}/projects.html" {% if page.name == 'projects.html' %}class="active"{% endif %}>Projects</a></li>
                 <li><a href="{{ site.baseurl }}/about.html" {% if page.name == 'about.html' %}class="active"{% endif %}>About Me</a></li>
-                <li><a href="{{ site.baseurl }}/contact.html" {% if page.name == 'contact.html' %}class="active"{% endif %}>Contact</a></li>
                 {% if page.lang == 'zh' %}
-                <li class="lang-switch-nav"><a href="{{ site.baseurl }}/{% if page.name == 'blog.zh.html' %}blog.html{% elsif page.name == 'projects.zh.html' %}projects.html{% elsif page.name == 'about.zh.html' %}about.html{% elsif page.name == 'contact.zh.html' %}contact.html{% elsif page.name == 'ai-agents.zh.html' %}ai-agents.html{% else %}index.html{% endif %}">English</a></li>
+                <li class="lang-switch-nav"><a href="{{ site.baseurl }}/{% if page.name == 'blog.zh.html' %}blog.html{% elsif page.name == 'projects.zh.html' %}projects.html{% elsif page.name == 'about.zh.html' %}about.html{% elsif page.name == 'ai-agents.zh.html' %}ai-agents.html{% else %}index.html{% endif %}">English</a></li>
                 {% else %}
-                <li class="lang-switch-nav"><a href="{{ site.baseurl }}/{% if page.name == 'blog.html' %}blog.zh.html{% elsif page.name == 'projects.html' %}projects.zh.html{% elsif page.name == 'about.html' %}about.zh.html{% elsif page.name == 'contact.html' %}contact.zh.html{% elsif page.name == 'ai-agents.html' %}ai-agents.zh.html{% else %}index.zh.html{% endif %}">中文</a></li>
+                <li class="lang-switch-nav"><a href="{{ site.baseurl }}/{% if page.name == 'blog.html' %}blog.zh.html{% elsif page.name == 'projects.html' %}projects.zh.html{% elsif page.name == 'about.html' %}about.zh.html{% elsif page.name == 'ai-agents.html' %}ai-agents.zh.html{% else %}index.zh.html{% endif %}">中文</a></li>
                 {% endif %}
             </ul>
         </div>
