@@ -57,10 +57,15 @@
                     </div>
                     <div class="project-info">
                         <h3>CodeMath</h3>
-                        <p>交互式计算机数学学习平台：九章内容全部做成可动手的演示——进制转换、逻辑门实验台、真值表生成器、归纳法多米诺、汉诺塔、分形与停机问题模拟器。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>计算机数学读起来是公式：看得懂证明，但建立不起直觉。</dd>
+                            <dt>我的动作</dt><dd>九章全部做成可动手的演示——进制转换、逻辑门实验台、真值表生成器、归纳法多米诺、汉诺塔、分形、停机问题模拟器；中英双语，一键启动。</dd>
+                            <dt>关键难点</dt><dd>把「停机问题」「数学归纳法」这类不可见的概念做成可操作的模拟，而不是把教材插图做成动图。</dd>
+                            <dt>结果</dt><dd>MIT 开源，codemath.pages.dev 上九章全部可玩</dd>
+                        </dl>
                         <p class="project-meta">React 19 · TypeScript · Three.js · GSAP · KaTeX · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                             <a href="https://codemath.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> 在线演示</a>
                         </div>
                     </div>
@@ -72,10 +77,15 @@
                     </div>
                     <div class="project-info">
                         <h3>SceneLine</h3>
-                        <p>面向语言学习者的 AI 配音练习平台：FunASR 常驻进程实现实时语音识别，40+ Edge TTS 音色按性别与地区筛选，支持多角色分角色评分，并提供带数据持久化的 Docker 部署。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>配音练习需要即时反馈：沉默半秒，练习的连贯性就断了。</dd>
+                            <dt>我的动作</dt><dd>FunASR 常驻进程做实时识别，40+ Edge 音色按性别与地区筛选，多角色分角色评分，三种练习历史视图，Docker 部署与数据持久化。</dd>
+                            <dt>关键难点</dt><dd>延迟优先：常驻进程换来速度，代价是内存与部署体积；音素级评分反而更不准，正在退回 ASR 文本对齐。</dd>
+                            <dt>结果</dt><dd>MIT 开源，Docker Compose 一条命令起，仓库内含完整部署脚本</dd>
+                        </dl>
                         <p class="project-meta">Node 20 · Python · FunASR · Edge TTS · Docker · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -86,10 +96,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Scripts to Audiobook</h3>
-                        <p>把格式化脚本转成多角色有声书：接入 Edge、ElevenLabs、讯飞、百度四家 TTS，内置加权音色匹配引擎与 61 音色目录，支持专辑化管理，输出合并 MP3 与 SRT 字幕。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>一份脚本要变成多角色音频：音色必须能区分，四家 TTS 的额度与格式又各不相同。</dd>
+                            <dt>我的动作</dt><dd>四家供应商统一接口；加权音色匹配（语言、口音、性别、年龄、旁白适配、多样性惩罚）并给出评分解释；61 音色目录；输出 MP3 + SRT + 时间轴；SQLite 曲库。</dd>
+                            <dt>关键难点</dt><dd>不让用户记 VoiceID：六人场景要记六个 id，反人性，于是改成按性别与地区筛选，并由匹配器保证角色音色不同。</dd>
+                            <dt>结果</dt><dd>四家免费额度即可跑通；产出可直接播放的 MP3 与 SRT</dd>
+                        </dl>
                         <p class="project-meta">FastAPI · React · SQLite · 4 TTS providers</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -100,10 +115,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Podcast Studio</h3>
-                        <p>输入话题即可成片：用 Perplexity sonar-pro 检索新闻并生成多轮对话脚本，逐段匹配 Edge TTS 音色，再用 ffmpeg 合并成单条 MP3，两分钟左右产出一期节目。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>让模型直接写播客会编事实；从话题到成片链路又很长。</dd>
+                            <dt>我的动作</dt><dd>Perplexity 先检索近期新闻，据结果写多轮脚本，逐段匹配 Edge 音色，ffmpeg 合并成单条 MP3；Docker Compose 一键启动。</dd>
+                            <dt>关键难点</dt><dd>让脚本有真实报道支撑，而不是模型回忆，同时把成片压在两分钟内。</dd>
+                            <dt>结果</dt><dd>约两分钟出一期；Docker Compose 可复现</dd>
+                        </dl>
                         <p class="project-meta">Python · FastAPI · Perplexity · Edge TTS · ffmpeg · Docker</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -114,10 +134,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Book to Audiobook</h3>
-                        <p>把 EPUB、MOBI、AZW3、PDF、TXT 转成带章节标记的 M4B / MP3 有声书，可选 TTS 供应商，支持 pip 直接安装的命令行用法。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>整本书会吃光免费 TTS 额度；PDF 又没有可靠结构可切。</dd>
+                            <dt>我的动作</dt><dd>EPUB/MOBI/AZW3/PDF/TXT 进，带章节标记的 M4B 或 MP3 出；章节可列出、查看、编辑；默认本地 TTS（Intel 用 Kokoro，Apple Silicon 用 Qwen3 MLX）；可从 PyPI 安装。</dd>
+                            <dt>关键难点</dt><dd>PDF 是排版产物不是结构产物，抽取带噪声，所以允许人工改——同时保证原文永不被覆盖。</dd>
+                            <dt>结果</dt><dd>6 个 release；pip 可装；单章 MP3 与整本 M4B 两种输出</dd>
+                        </dl>
                         <p class="project-meta">Python 3.11+ · ffmpeg · Calibre · PyPI</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -128,10 +153,15 @@
                     </div>
                     <div class="project-info">
                         <h3>MovieFairy</h3>
-                        <p>温柔的电影推荐工具：三个问题把心情映射到九种基于情绪调节理论的推荐策略，再从候选里加权采样。纯静态、可离线，无后端与 API 调用。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>推荐器要么随机，要么越推越窄；两小时的时间值得一个理由。</dd>
+                            <dt>我的动作</dt><dd>18 道题随机抽 3 道得到情绪画像，按情绪调节理论映射九种策略，再做加权采样；盲盒、换一部、平台筛选；PWA 可离线。</dd>
+                            <dt>关键难点</dt><dd>让推荐既可解释又不重复：softmax 采样让高分概率更大，但不唯一。</dd>
+                            <dt>结果</dt><dd>纯静态、零 API 调用，moviefairy.pages.dev 可在线体验</dd>
+                        </dl>
                         <p class="project-meta">Vanilla JS · Cloudflare Pages · PWA</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                             <a href="https://moviefairy.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> 在线体验</a>
                         </div>
                     </div>
@@ -143,14 +173,18 @@
                     </div>
                     <div class="project-info">
                         <h3>Edge Read Chrome (ReadAloud)</h3>
-                        <p>Chrome 朗读扩展：使用 Edge 神经网络音色逐词高亮朗读，通过 native messaging 而非 Web Speech API，内置微信读书、书香中国、QQ 阅读、豆瓣等站点的正文提取。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>浏览器自带语音音色少、断句差；微信读书这类站点把文字画在 canvas 上，DOM 里什么都没有。</dd>
+                            <dt>我的动作</dt><dd>edge-tts 走 native messaging；60ms 计时器逐词高亮；站点适配：微信读书拦截 fillText、书香中国 Swiper + PDF.js、QQ 阅读、天涯、豆瓣；0.5–2.0 倍速。</dd>
+                            <dt>关键难点</dt><dd>MV3 的 service worker 不能播媒体，音频得放在 offscreen document；canvas 页面只能拦截 fillText 才能拿到坐标。</dd>
+                            <dt>结果</dt><dd>5 个 release；一个脚本完成 native host 注册</dd>
+                        </dl>
                         <p class="project-meta">Chrome MV3 · Native messaging · edge-tts</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="about-text">
@@ -165,10 +199,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Building Generative AI Applications with Gradio</h3>
-                        <p>课程 Notebook 与配套智能体：跟着课程用 Gradio 构建并部署生成式 AI 应用；课程仓库目前未公开，智能体可在线体验。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>课程练习散落在 Notebook 里，课程结束后就丢了。</dd>
+                            <dt>我的动作</dt><dd>把课程代码整理成可复现的 Notebook，配一个清言伴学智能体随时答疑。</dd>
+                            <dt>关键难点</dt><dd>依赖漂移之后，仍让每个示例都能跑起来。</dd>
+                            <dt>结果</dt><dd>Notebook 与伴学智能体都已公开</dd>
+                        </dl>
                         <p class="project-meta">Jupyter · Gradio · Qingyan agent</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> 清言智能体</a>
+<a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> 清言智能体</a>
                         </div>
                     </div>
                 </div>
@@ -179,17 +218,18 @@
                     </div>
                     <div class="project-info">
                         <h3>AI Python for Beginners with GLM-4</h3>
-                        <p>吴恩达 AI Python 入门课程的学习伙伴，配合基于 GLM-4 的智能体边学边问；课程仓库目前未公开，智能体可在线体验。</p>
+                        <dl class="project-fields">
+                            <dt>问题</dt><dd>入门课最缺的是「卡住那一刻」的答案，而不是三天后的论坛回复。</dd>
+                            <dt>我的动作</dt><dd>按课程进度整理练习，配一个基于 GLM-4 的智能体随堂答疑。</dd>
+                            <dt>关键难点</dt><dd>让回答贴着当前这一课，而不是飘成泛泛闲聊。</dd>
+                            <dt>结果</dt><dd>伴学智能体可在线使用</dd>
+                        </dl>
                         <p class="project-meta">Jupyter · GLM-4 · Qingyan agent</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> 清言智能体</a>
+<a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> 清言智能体</a>
                         </div>
                     </div>
                 </div>
-                        </div>
-
-            <div class="about-text">
-                <h3>相关智能体</h3>
             </div>  
 
             <div class="agents-grid">

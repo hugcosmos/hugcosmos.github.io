@@ -1054,3 +1054,27 @@ footer {
 @media (max-width: 640px) {
     .matrix th, .matrix td { padding: 10px 10px; font-size: 0.9rem; }
 }
+
+
+/* Project cards: five-field structure */
+.project-fields {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 7px 14px;
+    margin: 14px 0 16px;
+    font-size: 0.93rem;
+}
+.project-fields dt {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #7b1fa2;
+    padding-top: 2px;
+    white-space: nowrap;
+}
+.project-fields dd { margin: 0; color: #3f3d55; line-height: 1.65; }
+
+@media (max-width: 640px) {
+    .project-fields { grid-template-columns: 1fr; gap: 2px; }
+    .project-fields dt { margin-top: 10px; }
+}
