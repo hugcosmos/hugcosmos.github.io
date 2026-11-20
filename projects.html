@@ -57,10 +57,15 @@
                     </div>
                     <div class="project-info">
                         <h3>CodeMath</h3>
-                        <p>An interactive platform for computer-science mathematics: nine chapters rebuilt as hands-on demos — base converter, logic-gate playground, truth-table generator, induction dominos, Tower of Hanoi, fractals and a halting-problem simulator.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>Computer-science maths reads as formulas; readers can follow a proof but never build intuition.</dd>
+                            <dt>What I built</dt><dd>Nine chapters rebuilt as hands-on demos: base converter, logic-gate bench, truth-table generator, induction dominoes, Tower of Hanoi, fractals, halting-problem simulator. Bilingual UI, one-click start.</dd>
+                            <dt>Hardest part</dt><dd>Turning invisible ideas — the halting problem, inductive proof — into something a reader can manipulate, instead of animating textbook figures.</dd>
+                            <dt>Result</dt><dd>MIT licensed, all nine chapters playable online at codemath.pages.dev</dd>
+                        </dl>
                         <p class="project-meta">React 19 · TypeScript · Three.js · GSAP · KaTeX · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/CodeMath" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                             <a href="https://codemath.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Live Demo</a>
                         </div>
                     </div>
@@ -72,10 +77,15 @@
                     </div>
                     <div class="project-info">
                         <h3>SceneLine</h3>
-                        <p>An AI dubbing practice platform for language learners: real-time ASR with a resident FunASR process, 40+ Edge TTS voices filtered by gender and locale, multi-character scenes with per-role scoring, and Docker deployment with data persistence.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>Dubbing practice needs immediate feedback; half a second of silence breaks the flow and the learner loses the thread.</dd>
+                            <dt>What I built</dt><dd>FunASR as a resident process for real-time recognition, 40+ Edge voices filtered by gender and locale, per-role scoring, three history views, Docker deployment with persistence.</dd>
+                            <dt>Hardest part</dt><dd>Latency first: the resident process buys speed but costs memory and deployment weight. The phoneme-level scorer I tried was less accurate than plain ASR, and is being replaced.</dd>
+                            <dt>Result</dt><dd>MIT, one-command Docker Compose, full deployment scripts in the repo</dd>
+                        </dl>
                         <p class="project-meta">Node 20 · Python · FunASR · Edge TTS · Docker · MIT</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/SceneLine" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -86,10 +96,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Scripts to Audiobook</h3>
-                        <p>Turn formatted scripts into multi-voice audiobooks across four TTS providers (Edge, ElevenLabs, iFlytek, Baidu), with a weighted voice-matching engine, a 61-voice catalog, album-based library management, and merged MP3 + SRT output.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>One script has to become audio for several characters: voices must differ, four TTS providers have different quotas and formats.</dd>
+                            <dt>What I built</dt><dd>Four providers behind one interface, weighted voice matching (language, accent, gender, age, narrator fit, diversity penalty) with score explanations, a 61-voice catalog, MP3 + SRT + timeline output, SQLite library.</dd>
+                            <dt>Hardest part</dt><dd>Not making users memorise VoiceIDs: a six-character scene would mean six IDs, so filtering by gender and locale replaced it, with the matcher guaranteeing distinct voices.</dd>
+                            <dt>Result</dt><dd>Runs on free tiers across all four providers; output is a playable MP3 plus SRT</dd>
+                        </dl>
                         <p class="project-meta">FastAPI · React · SQLite · 4 TTS providers</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/scripts-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -100,10 +115,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Podcast Studio</h3>
-                        <p>Topic in, episode out: news search and a multi-turn script via Perplexity sonar-pro, distinct Edge TTS voices per turn, merged into one MP3 with ffmpeg — a finished episode in about two minutes.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>A model writing a podcast from scratch invents facts; the path from topic to finished episode is long.</dd>
+                            <dt>What I built</dt><dd>Perplexity searches recent news first, a multi-turn script is written from those results, each turn gets its own Edge voice, and ffmpeg merges a single MP3. Docker Compose starts everything.</dd>
+                            <dt>Hardest part</dt><dd>Grounding the script in real reporting rather than model recall, while keeping the episode under a couple of minutes.</dd>
+                            <dt>Result</dt><dd>About two minutes per episode; reproducible with Docker Compose</dd>
+                        </dl>
                         <p class="project-meta">Python · FastAPI · Perplexity · Edge TTS · ffmpeg · Docker</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/podcast-studio" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -114,10 +134,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Book to Audiobook</h3>
-                        <p>Convert EPUB, MOBI, AZW3, PDF and TXT into chapter-marked M4B or MP3 audiobooks, with selectable TTS providers and a pip-installable command line.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>A whole book exhausts free TTS quota, and PDF has no reliable structure to split on.</dd>
+                            <dt>What I built</dt><dd>EPUB/MOBI/AZW3/PDF/TXT in, chapter-marked M4B or MP3 out; chapters can be listed, viewed, edited; local TTS by default (Kokoro on Intel, Qwen3 MLX on Apple Silicon); installable from PyPI.</dd>
+                            <dt>Hardest part</dt><dd>PDF is layout, not structure: extraction is noisy, so manual editing is allowed — while making sure the original text is never overwritten.</dd>
+                            <dt>Result</dt><dd>Six releases; pip-installable; both single-chapter MP3 and whole-book M4B</dd>
+                        </dl>
                         <p class="project-meta">Python 3.11+ · ffmpeg · Calibre · PyPI</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/book-to-audiobook" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -128,10 +153,15 @@
                     </div>
                     <div class="project-info">
                         <h3>MovieFairy</h3>
-                        <p>A gentle movie recommender: three questions map your mood onto nine strategies drawn from mood-management theory, then sample from the top candidates. Pure static, PWA, no backend or API calls.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>Recommenders either feel random or keep narrowing; a two-hour commitment deserves a reason.</dd>
+                            <dt>What I built</dt><dd>Three of eighteen questions produce a mood profile, mapped to nine strategies from mood-management theory, then weighted sampling; blind box, swap, platform filter; PWA offline.</dd>
+                            <dt>Hardest part</dt><dd>Making a recommendation both explainable and non-repeating: softmax sampling keeps high scores likely without being deterministic.</dd>
+                            <dt>Result</dt><dd>Fully static, zero API calls, playable at moviefairy.pages.dev</dd>
+                        </dl>
                         <p class="project-meta">Vanilla JS · Cloudflare Pages · PWA</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/MovieFairy" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                             <a href="https://moviefairy.pages.dev/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Live Demo</a>
                         </div>
                     </div>
@@ -143,14 +173,18 @@
                     </div>
                     <div class="project-info">
                         <h3>Edge Read Chrome (ReadAloud)</h3>
-                        <p>A Chrome extension that reads pages aloud with Edge neural voices and word-by-word highlighting, using native messaging instead of the Web Speech API, plus site-specific extraction for WeRead, ChineseAll, QQ Reading and Douban.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>Built-in browser voices are few and phrased badly; reading sites like WeRead draw text on canvas, so the DOM has nothing.</dd>
+                            <dt>What I built</dt><dd>edge-tts over native messaging, word-level highlighting on a 60 ms timer, site adapters for WeRead (fillText interception), ChineseAll (Swiper + PDF.js), QQ Reading, Tianya, Douban; 0.5×–2.0× speed.</dd>
+                            <dt>Hardest part</dt><dd>MV3 service workers cannot play media, so audio runs in an offscreen document; canvas pages have to be intercepted at fillText to recover coordinates.</dd>
+                            <dt>Result</dt><dd>Five releases; one script registers the native host</dd>
+                        </dl>
                         <p class="project-meta">Chrome MV3 · Native messaging · edge-tts</p>
                         <div class="project-links">
-                            <a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://github.com/hugcosmos/edge-read-chrome" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="about-text">
@@ -165,10 +199,15 @@
                     </div>
                     <div class="project-info">
                         <h3>Building Generative AI Applications with Gradio</h3>
-                        <p>Course notebooks plus a companion agent for building and deploying generative AI apps with Gradio. The course repository is not publicly available; the companion agent is.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>Course exercises scatter across notebooks and get lost after the course ends.</dd>
+                            <dt>What I built</dt><dd>Course code organised into reproducible notebooks, plus a companion Qingyan agent for questions along the way.</dd>
+                            <dt>Hardest part</dt><dd>Keeping every example runnable as dependencies drift.</dd>
+                            <dt>Result</dt><dd>Notebooks and the companion agent are both public</dd>
+                        </dl>
                         <p class="project-meta">Jupyter · Gradio · Qingyan agent</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> Qingyan Agent</a>
+<a href="https://chatglm.cn/main/gdetail/66c6ea549047593135d89088" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> Qingyan Agent</a>
                         </div>
                     </div>
                 </div>
@@ -179,17 +218,18 @@
                     </div>
                     <div class="project-info">
                         <h3>AI Python for Beginners with GLM-4</h3>
-                        <p>Study companion for Andrew Ng's AI Python for Beginners, with a GLM-4 based agent answering along the course. The course repository is not publicly available; the agent is.</p>
+                        <dl class="project-fields">
+                            <dt>Problem</dt><dd>A beginner course needs answers at the moment of confusion, not in a forum three days later.</dd>
+                            <dt>What I built</dt><dd>Exercises organised alongside the course, with a GLM-4 agent answering in context.</dd>
+                            <dt>Hardest part</dt><dd>Keeping answers tied to the current lesson instead of drifting into general chat.</dd>
+                            <dt>Result</dt><dd>Companion agent usable online</dd>
+                        </dl>
                         <p class="project-meta">Jupyter · GLM-4 · Qingyan agent</p>
                         <div class="project-links">
-                            <a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> Qingyan Agent</a>
+<a href="https://chatglm.cn/main/gdetail/66ba050ebf79f88056ba4fa5" class="project-link" target="_blank" rel="noopener"><i class="fas fa-link"></i> Qingyan Agent</a>
                         </div>
                     </div>
                 </div>
-                        </div>
-
-            <div class="about-text">
-                <h3>Related Agents</h3>
             </div>  
 
             <div class="agents-grid">
