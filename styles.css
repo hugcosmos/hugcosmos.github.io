@@ -981,3 +981,76 @@ footer {
 @media (max-width: 768px) {
     .site-title { font-size: 2rem; }
 }
+
+
+/* Home: verified numbers */
+.stats-section { max-width: 1000px; margin: 4px auto 0; }
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 26px 0 6px;
+}
+.stats-row a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 8px;
+    border: 1px solid rgba(123, 31, 162, 0.14);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.25s ease;
+}
+.stats-row a:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(123, 31, 162, 0.16); }
+.stat-num { display: block; font-size: 1.6rem; font-weight: 800; line-height: 1.2; color: #7b1fa2; }
+.stat-label { display: block; font-size: 0.78rem; color: #6b6b85; margin-top: 4px; }
+
+/* Home: text-only entry row */
+.more-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+    max-width: 1000px;
+    margin: 34px auto 12px;
+}
+.more-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #7b1fa2;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(123, 31, 162, 0.25);
+    padding-bottom: 2px;
+}
+.more-links a:hover { border-bottom-color: #7b1fa2; }
+
+@media (max-width: 768px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* About: capability matrix */
+.matrix-section { margin: 10px auto 40px; }
+.matrix-title { font-size: 1.5rem; color: #4a148c; margin-bottom: 14px; }
+.matrix {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 26px rgba(74, 20, 140, 0.10);
+    font-size: 0.95rem;
+}
+.matrix th, .matrix td { text-align: left; padding: 12px 14px; border-bottom: 1px solid rgba(123, 31, 162, 0.10); vertical-align: top; }
+.matrix th { background: #f6ecfb; color: #6b1f8f; font-size: 0.85rem; letter-spacing: 0.02em; }
+.matrix tr:last-child td { border-bottom: 0; }
+.matrix a { color: #7b1fa2; text-decoration: none; }
+.matrix a:hover { text-decoration: underline; }
+.about-timeline { margin: 8px 0 0 18px; }
+.about-timeline li { margin-bottom: 6px; }
+
+@media (max-width: 640px) {
+    .matrix th, .matrix td { padding: 10px 10px; font-size: 0.9rem; }
+}
