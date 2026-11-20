@@ -17,6 +17,4 @@ layout: null
   <url><loc>{{ site.url }}/about.zh.html</loc></url>
   <url><loc>{{ site.url }}/ai-agents.html</loc></url>
   <url><loc>{{ site.url }}/ai-agents.zh.html</loc></url>
-  <url><loc>{{ site.url }}/contact.html</loc></url>
-  <url><loc>{{ site.url }}/contact.zh.html</loc></url>
 </urlset>
